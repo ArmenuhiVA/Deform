@@ -59,9 +59,8 @@ export default function Footer() {
                         <Image src={group} alt="Group" className="object-cover" />
                     </div>
                 </div>
-
             </div>
-            <div className="max-w-7xl px-2 sm:px-6 lg:px-8 mt-16 border-b-solid border-b-2">
+            {/* <div className="max-w-7xl px-2 sm:px-6 lg:px-8 mt-16 border-b-solid border-b-2">
                 <div className="text-lg lg:text-xl leading-relaxed flex flex-col lg:flex-row lg:space-x-12">
                     <div className="lg:w-1/2">
 
@@ -72,7 +71,7 @@ export default function Footer() {
                         <p>Terms of service | Privacy Policy</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     )
