@@ -25,19 +25,19 @@ function classNames(...classes: string[]) {
 const Navbar = () => {
   return (
     <Disclosure as="nav" className="bg-white-800">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16">
+      <div className=" lg:px-[100px] ">
+        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] mx-auto sm:w-full px-6">
           <Link href="/">
-            <Image src={deformLogo} alt="Logo" className="w-[70px] md:w-full" />
+            <Image src={deformLogo} alt="Logo" />
           </Link>
-          <div className="absolute hidden md:flex inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="flex space-x-4">
+          <div className="absolute hidden md:flex inset-y-0 right-0 items-center sm:static sm:inset-auto sm:pr-0 ">
+            <div className="flex space-x-[40px] w-full">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   aria-current={item.current ? "page" : undefined}
-                  className="px-3 py-2 paragraph-s"
+                  className="px-[10px] py-[18px] paragraph-s"
                 >
                   {item.name}
                 </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden ">
+          <div className="absolute inset-y-0 right-0 flex items-center md:hidden px-6">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />

@@ -6,6 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+   
     extend: {
       fontFamily: {
         grotesk: ["var(--grotesk)", "serif"],
@@ -15,6 +16,7 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      
     },
     colors: {
       customGray: "#9d9d9d",
