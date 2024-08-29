@@ -17,9 +17,15 @@ export default function Home() {
   return (
     <Layout>
       {/* <NavBar /> */}
-      <div className="lg:mx-auto  mt-[60px] px-6">
-        <Image src={homeimg} alt="homeimg" className="object-contain mx-auto " />
+      <div className="lg:mx-auto  lg:mt-[60px] mt-[24px] px-6">
+        <Image src={homeimg} alt="homeimg" className="object-contain mx-auto hidden lg:block" />
+        <Image
+          src={stairsimg}
+          alt="Kitchen Small"
+          className="w-full h-full object-cover lg:hidden"
+        />
       </div>
+
 
       {/* About Section */}
 
@@ -78,11 +84,9 @@ export default function Home() {
             <Image src={project1} alt="homeimg" className="object-contain mx-auto " />
           </div>
           <div className="order-3 lg:order-none">
-            {/* Changed order for small screens */}
             <Image src={project2} alt="homeimg" className="object-contain mx-auto " />
           </div>
           <div className="order-2 lg:order-none">
-            {/* Changed order for small screens */}
             <Image src={project3} alt="homeimg" className="object-contain mx-auto " />
           </div>
         </div>
@@ -95,7 +99,7 @@ export default function Home() {
         <div className="leading-relaxed lg:flex lg:space-x-12">
           <div className="lg:w-[610px]">
             <h2 className="text-heading-2 font-bold"> Services </h2>
-            <div className="border-b border-customGray lg:mt-[48px] mt-[24px]  lg:pb-[18px] pb-[16px] flex items-center justify-between text-customGray hover:text-black">
+            <div className="border-b border-customGray lg:mt-[48px] mt-[24px]  lg:pb-[18px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Design Concept Consultation</p>
               <Link href="/about">
                 <Image
@@ -105,7 +109,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px]  flex items-center justify-between text-customGray hover:text-black">
+            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px]  flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Interior Design</p>
               <Link href="/about">
                 <Image
@@ -115,7 +119,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px]  mt-[16px] pb-[16px] flex items-center justify-between text-customGray hover:text-black">
+            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px]  mt-[16px] pb-[16px] flex items-center justify-between text-customGray hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Interior Decoration</p>
               <Link href="/about">
                 <Image
@@ -125,7 +129,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px] flex items-center justify-between text-customGray hover:text-black">
+            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Author Support</p>
               <Link href="/about">
                 <Image
@@ -135,7 +139,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px] flex items-center justify-between text-customGray hover:text-black">
+            <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Supply Management</p>
               <Link href="/about">
                 <Image
@@ -156,21 +160,17 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:w-[610px] lg:ml-[20px] mt-[34px]">
-            {/* Image for large screens */}
             <Image
               src={kitchenimg}
               alt="Kitchen"
               className="w-full h-full object-cover hidden lg:block"
             />
-
-            {/* Image for small screens */}
             <Image
-              src={stairsimg}  
+              src={stairsimg}
               alt="Kitchen Small"
               className="w-full h-full object-cover lg:hidden"
             />
           </div>
-
         </div>
       </div>
 

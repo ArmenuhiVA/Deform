@@ -23,6 +23,7 @@ module.exports = {
       customGreen: "#03322F",
       customWhite: "rgb(255 255 255)",
       customGrayN300: "#C4C4C4",
+      customBlack: "#000000"
     },
     fontFamily: {
       overused: ["Overused Grotesk", "sans-serif"],
