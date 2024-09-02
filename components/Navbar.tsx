@@ -1,3 +1,7 @@
+
+"use client"; // Add this at the very top of your file
+
+
 import {
   Disclosure,
   DisclosureButton,
@@ -7,6 +11,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import deformLogo from "../public/deform_logo.svg";
+import { motion } from "framer-motion";
+import React, { createContext, useContext } from 'react';
+
 
 const navigation = [
   // { name: "Home", href: "/", current: false },
@@ -25,19 +32,19 @@ function classNames(...classes: string[]) {
 const Navbar = () => {
   return (
     <Disclosure as="nav" className="bg-white-800">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16">
+      <div className=" lg:px-[100px] ">
+        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] mx-auto sm:w-full px-6">
           <Link href="/">
-            <Image src={deformLogo} alt="Logo" className="w-[70px] md:w-full" />
+            <Image src={deformLogo} alt="Logo" />
           </Link>
-          <div className="absolute hidden md:flex inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="flex space-x-4">
+          <div className="absolute hidden md:flex inset-y-0 right-0 items-center sm:static sm:inset-auto sm:pr-0 ">
+            <div className="flex space-x-[40px] w-full">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   aria-current={item.current ? "page" : undefined}
-                  className="px-3 py-2 paragraph-s"
+                  className="px-[10px] py-[18px] paragraph-s"
                 >
                   {item.name}
                 </Link>
@@ -45,9 +52,9 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden ">
+          <div className="absolute inset-y-0 right-0 flex items-center md:hidden px-6">
             {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white ">
               <span className="absolute -inset-0.5" />
               <Bars3Icon
                 aria-hidden="true"
@@ -62,8 +69,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-2 pb-3 pt-2">
+      <DisclosurePanel className="md:hidden overflow-hidden transform origin-top">
+        <motion.div
+          initial={{ height: 0, opacity: 0 }} // Start with zero height and opacity
+          animate={{ height: "auto", opacity: 1 }} // Animate to full height and opacity
+          transition={{ ease: "easeInOut", duration: 1.5 }} // Smooth and slow opening
+          className="space-y-1 px-2 pb-3 pt-2"
+        >
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
@@ -74,13 +86,15 @@ const Navbar = () => {
                 item.current
                   ? "bg-gray-900 text-white"
                   : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                "block rounded-md px-3 py-2 text-base font-medium"
+                "block rounded-md px-6 py-2 text-base font-medium"
               )}
             >
-              {item.name}
+             
+                {item.name}
+             
             </DisclosureButton>
           ))}
-        </div>
+        </motion.div>
       </DisclosurePanel>
     </Disclosure>
   );
