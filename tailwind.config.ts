@@ -6,7 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-   
+
     extend: {
       fontFamily: {
         grotesk: ["var(--grotesk)", "serif"],
@@ -16,7 +16,7 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      
+
     },
     colors: {
       customGray: "#9d9d9d",
@@ -42,11 +42,25 @@ module.exports = {
       "label-l": ["16px", { lineHeight: "24px" }],
       "label-m": ["14px", { lineHeight: "22px" }],
       "label-s": ["12px", { lineHeight: "20px" }],
+      "heading-1-mobile": ["38px", { lineHeight: "46px" }],
+      "heading-2-mobile": ["30px", { lineHeight: "38px" }],
+      "heading-3-mobile": ["18px", { lineHeight: "28px" }],
+      "h4-mobile": ["16px", { lineHeight: "21px" }], // Medium 500
+      "h5-mobile": ["14px", { lineHeight: "19px" }], // Bold 700
+      "subheading-1-mobile": ["24px", { lineHeight: "32px" }],
+      "subheading-2-mobile": ["20px", { lineHeight: "28px" }],
+      "paragraph-l-mobile": ["20px", { lineHeight: "28px" }],
+      "paragraph-m-mobile": ["18px", { lineHeight: "26px" }],
+      "paragraph-s-mobile": ["16px", { lineHeight: "24px" }],
+      "paragraph-xs-mobile": ["14px", { lineHeight: "22px" }],
+      "label-l-mobile": ["16px", { lineHeight: "24px" }],
+      "label-m-mobile": ["14px", { lineHeight: "22px" }],
+      "label-s-mobile": ["12px", { lineHeight: "20px" }],
     },
     lineHeight: {
       h4: "21px",
       h5: "19px",
     },
   },
-  plugins: [],
+
 };
