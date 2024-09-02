@@ -1,5 +1,5 @@
 
-"use client"; // Add this at the very top of your file
+"use client"; 
 
 
 import {
@@ -16,7 +16,6 @@ import React, { createContext, useContext } from 'react';
 
 
 const navigation = [
-  // { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Projects", href: "/projects", current: false },
   { name: "Services", href: "/services", current: false },
@@ -31,9 +30,9 @@ function classNames(...classes: string[]) {
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-white-800">
+    <Disclosure as="nav" className="sticky top-0 z-50 bg-white-800 ">
       <div className=" lg:px-[100px] ">
-        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] mx-auto sm:w-full px-6">
+        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] md:mx-auto">
           <Link href="/">
             <Image src={deformLogo} alt="Logo" />
           </Link>
@@ -71,9 +70,9 @@ const Navbar = () => {
 
       <DisclosurePanel className="md:hidden overflow-hidden transform origin-top">
         <motion.div
-          initial={{ height: 0, opacity: 0 }} // Start with zero height and opacity
-          animate={{ height: "auto", opacity: 1 }} // Animate to full height and opacity
-          transition={{ ease: "easeInOut", duration: 1.5 }} // Smooth and slow opening
+          initial={{ height: 0, opacity: 0 }} 
+          animate={{ height: "auto", opacity: 1 }} 
+          transition={{ ease: "easeInOut", duration: 1.5 }}
           className="space-y-1 px-2 pb-3 pt-2"
         >
           {navigation.map((item) => (

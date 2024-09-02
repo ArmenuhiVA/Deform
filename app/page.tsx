@@ -31,19 +31,19 @@ export default function Home() {
 
       <div className="lg:w-[1240px] lg:mx-auto lg:mt-[104px] mt-[60px] mx-6 sm:h-[374px]">
         <div className="flex flex-col lg:flex-row ">
-          <h2 className="text-heading-2 flex-1 font-bold pb-[24px] lg:pb-[0px]">About</h2>
+          <h2 className="text-heading-2-mobile lg:text-heading-2 flex-1 font-bold pb-[24px] lg:pb-[0px]">About</h2>
           <div className="flex-1  lg:w-[715px]">
-            <h2 className="text-subheading-1 font-semibold lg:w-[615px] lg:h-[96px] pb-[12px] lg:pb-[0px] ">
+            <h2 className="text-subheading-1-mobile lg:text-subheading-1 font-semibold lg:w-[615px] lg:h-[96px] pb-[12px] lg:pb-[0px] ">
               Welcome to Deform, where your story becomes our inspiration.
             </h2>
-            <p className="text-paragraph-l lg:h-[128px] lg:w-[705px]">
+            <p className="text-paragraph-l-mobile lg:paragraph-l lg:h-[128px] lg:w-[705px]">
               For us, design isn&apos;t just a job — it&apos;s a calling to make
               a difference in people&apos;s lives. That&apos;s why every project
               we undertake is infused with purpose, aimed at improving the space
               that envelops you and enriching your environment.
             </p>
             <div className="md:w-[151px] w-[190px] h-10 border-zinc-500 border-b-solid border-b-2 md:ml-auto mr-[40px] md:mt-[84px]  mt-[34px] flex items-center justify-between md:justify-end">
-              <p className="md:hidden text-paragraph-xs">More information</p>
+              <p className="md:hidden text-paragraph-xs-mobile lg:text-paragraph-xs">More information</p>
               <Link href="/about">
 
                 <Image
@@ -60,11 +60,11 @@ export default function Home() {
 
       {/* Projects Section */}
       <div className="lg:mx-auto lg:w-[1240px] md:mb-16 mb-[22px] mx-6">
-        <div className="text-lg lg:text-xl leading-relaxed lg:flex md:mt-[145px] mt-[60px]">
-          <h2 className="lg:w-1/2 text-heading-2 font-bold">Projects</h2>
+        <div className=" leading-relaxed lg:flex md:mt-[145px] mt-[60px]">
+          <h2 className="lg:w-1/2 text-heading-2-mobile lg:text-heading-2 font-bold">Projects</h2>
           <div className="lg:w-1/2">
             <div className="md:w-[151px] w-[190px] h-10 border-zinc-500 border-b-solid border-b-2 md:ml-auto g:w-1/2 mt-[24px] md:mt-[0px] flex items-center justify-between md:justify-end">
-              <p className="md:hidden text-paragraph-xs">Our Projects</p>
+              <p className="md:hidden text-paragraph-xs-mobile lg:text-paragraph-xs">Our Projects</p>
 
               <Link href="/projects">
                 <Image
@@ -98,7 +98,7 @@ export default function Home() {
       <div className="lg:mx-auto lg:w-[1240px] mx-6  lg:mt-[140px] mt-[60px] ">
         <div className="leading-relaxed lg:flex lg:space-x-12">
           <div className="lg:w-[610px]">
-            <h2 className="text-heading-2 font-bold"> Services </h2>
+            <h2 className="text-heading-2-mobile lg:text-heading-2 font-bold"> Services </h2>
             <div className="border-b border-customGray lg:mt-[48px] mt-[24px]  lg:pb-[18px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Design Concept Consultation</p>
               <Link href="/about">
