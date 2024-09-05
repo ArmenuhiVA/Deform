@@ -1,7 +1,6 @@
 import homeimg from "../public/homeimg.png";
 import Link from "next/link";
 import Image from "next/image";
-import ArrowRight from "../public/Arrow Right.svg";
 import arrowright from "../public/Arrow Right.svg";
 
 import kitchenimg from "../public/kitchen.png";
