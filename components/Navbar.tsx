@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <Disclosure as="nav" className="sticky top-0 z-50 bg-white-800 ">
       <div className=" lg:px-[100px] ">
-        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] md:mx-auto">
+        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] md:mx-auto px-6 lg:px-0">
           <Link href="/">
             <Image src={deformLogo} alt="Logo" />
           </Link>
