@@ -1,15 +1,7 @@
-'use client'
 
 import Layout from "@/components/Layout";
-import stairs from '@/public/stairs.jpg'
-import frame99 from "@/public/Frame99.jpg"
-import frame100 from "@/public/Frame100.jpg"
-import arrowdown from '@/public/ArrowDown.svg'
-import plus from '@/public/Plus.svg'
-import vector from '@/public/Vector233.svg'
 import paradise from '@/public/paradise.jpg'
 import Image from "next/image";
-import { useState } from "react";
 import React from "react";
 
 
