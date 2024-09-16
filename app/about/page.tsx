@@ -47,20 +47,19 @@ export default function About() {
                                 <h3 className="lg:text-subheading-1 text-subheading-1-mobile font-semibold">Grigoryan Anush</h3>
                                 <p className="lg:text-paragraph-l text-paragraph-l-mobile pt-[16px] pb-[24px] border-b  border-customGray ">Founder and CEO</p>
                                 <p className="lg:text-paragraph-l text-paragraph-l-mobile py-[24px] ">
-                                    I'm Anush, the founder and creative mind behind our studio. With over seven years of experience crafting both residential and commercial interiors, I've dedicated myself to creating spaces that seamlessly blend functionality with aesthetic allure.
-                                </p>
+                                    I’m Anush, the founder and creative mind behind our studio. 
+                                    With over seven years of experience crafting both residential and commercial interiors, 
+                                    I’ve dedicated myself to creating spaces that seamlessly blend functionality with aesthetic allure.                                </p>
                             </div>
                         </div>
 
                         {/* Philosophy Text */}
                         <div className="border-b lg:border-r lg:border-l border-customGray ">
                             <p className="lg:pt-10 lg:text-paragraph-l  text-paragraph-l-mobile pb-[24px] lg:w-[800px]">
-                                For us, design isn't just a job – it's a calling to make a difference in people's lives.
-                                That's why every project we undertake is infused with purpose, aimed at
-                                improving the space that envelops you and enriching your environment.
-                                But what truly sets us apart is our personalized approach. We don't just create for the sake of it;
-                                we immerse ourselves in your vision, understanding your unique needs and aspirations to deliver
-                                spaces that truly resonate with you.
+                                For us, design isn’t just a job – it’s a calling to make a difference in people’s lives.
+                                That’s why every project we undertake is infused with purpose, aimed at improving the space that envelops you and enriching your environment.
+                                But what truly sets us apart is our personalized approach.
+                                We don’t just create for the sake of it; we immerse ourselves in your vision, understanding your unique needs and aspirations to deliver spaces that truly resonate with you.
                             </p>
                         </div>
                     </div>
