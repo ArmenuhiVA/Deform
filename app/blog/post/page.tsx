@@ -17,12 +17,10 @@ export default function BlogPost() {
             {/* Title Section */}
 
             <div className="lg:w-[1240px] lg:mx-auto  mx-6 ">
-                <div >
                     <h1 className="lg:w-[500px] lg:text-heading-1 text-heading-1-mobile font-bold lg:pt-[75px] lg:pb-[80px] py-[24px]">
                         Commercial architecture: <br />
                         Best practices
                     </h1>
-                </div>
             </div>
 
             <div className="lg:w-[1240px] lg:mx-auto mx-6 ">
@@ -57,7 +55,6 @@ export default function BlogPost() {
                             alt="Interior Design"
                             className="w-full h-auto lg:pb-[32px] pb-[16px]"
                         />
-
                     </div>
                 </div>
 
@@ -109,7 +106,6 @@ export default function BlogPost() {
                     <div className="col-span-1">
                         <h2 className="font-bold lg:text-subheading-2 text-subheading-2-mobile">Security</h2>
                     </div>
-
                     {/* Right Content Column */}
                     <div className="col-span-2">
                         <p className="lg:text-paragraph-s  text-paragraph-s-mobile lg:pb-[32px] pb-[16px] lg:w-[800px]">
@@ -120,7 +116,6 @@ export default function BlogPost() {
                             alt="homeimg"
                             className="w-full h-auto lg:pb-[32px] pb-[16px]"
                         />
-
                     </div>
                 </div>
 
@@ -130,7 +125,6 @@ export default function BlogPost() {
                     <div className="col-span-1">
                         <h2 className="font-bold lg:text-subheading-2 text-subheading-2-mobile">Technology Integration</h2>
                     </div>
-
                     {/* Right Content Column */}
                     <div className="col-span-2">
                         <p className="lg:text-paragraph-s  text-paragraph-s-mobile pb-[24px] lg:w-[800px]">
@@ -158,14 +152,12 @@ export default function BlogPost() {
                     <div className="col-span-1">
                         <h2 className="font-bold lg:text-subheading-2 text-subheading-2-mobile">Summary</h2>
                     </div>
-
                     {/* Right Content Column */}
                     <div className="col-span-2 border-b border-customGrayN200">
                         <p className="lg:text-paragraph-s  text-paragraph-s-mobile pb-[24px] lg:w-[800px]">
                             Commercial architecture design best practices must prioritise functionality, sustainability, branding, flexibility, security, technology integration, and accessibility. Businesses must work with experienced architects to create spaces that are not only visually appealing but also practical, energy-efficient, and cost-effective. By incorporating these best practices into their commercial architecture design, businesses can create spaces that attract customers, enhance the customer experience, and boost their brand reputation.
                         </p>
                     </div>
-
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-3 items-start">
@@ -191,8 +183,6 @@ export default function BlogPost() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
             <div className="lg:w-[1240px] lg:mx-auto  mx-6 ">

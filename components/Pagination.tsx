@@ -6,9 +6,10 @@ interface PaginationProps {
   totalPages: number;
   leftButton: string;
   rightButton: string;
+  path: string
 }
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftButton, rightButton }) => {
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftButton, rightButton, path }) => {
   const renderPageNumbers = () => {
     const pages = [];
 
@@ -16,7 +17,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftBu
 
     // Always show the first page
     pages.push(
-      <Link key={1} href={`/blog?page=1`}>
+      <Link key={1} href={`/${path}?page=1`}>
         <span className={`px-2 ${validCurrentPage === 1 ? 'font-bold text-white bg-blue-500' : 'text-blue-500 hover:underline'}`}>
           1
         </span>
@@ -29,7 +30,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftBu
     // Show the page before the current page (if applicable)
     if (validCurrentPage > 2) {
       pages.push(
-        <Link key={validCurrentPage - 1} href={`/blog?page=${validCurrentPage - 1}`}>
+        <Link key={validCurrentPage - 1} href={`/${path}?page=${validCurrentPage - 1}`}>
           <span className="px-2 text-blue-500 hover:underline">
             {validCurrentPage - 1}
           </span>
@@ -49,7 +50,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftBu
     // Show the page after the current page (if applicable)
     if (validCurrentPage < totalPages - 1) {
       pages.push(
-        <Link key={validCurrentPage + 1} href={`/blog?page=${validCurrentPage + 1}`}>
+        <Link key={validCurrentPage + 1} href={`/${path}?page=${validCurrentPage + 1}`}>
           <span className="px-2 text-blue-500 hover:underline">
             {validCurrentPage + 1}
           </span>
@@ -63,26 +64,22 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftBu
     // Always show the last page
     if (totalPages > 1) {
       pages.push(
-        <Link key={totalPages} href={`/blog?page=${totalPages}`}>
+        <Link key={totalPages} href={`/${path}?page=${totalPages}`}>
           <span className={`px-2 ${validCurrentPage === totalPages ? 'font-bold text-white bg-blue-500' : 'text-blue-500 hover:underline'}`}>
             {totalPages}
           </span>
         </Link>
       );
     }
-
     return pages;
   };
-
-
-
 
   return (
     <div className="flex flex-col lg:items-end lg:justify-end items-center justify-center lg:mt-[60px] mt-[40px] text-cunstomGrayN500 text-regular lg:h-[32px] px-2">
       <div className="flex items-center gap-2">
         {/* Previous Button */}
         {currentPage > 1 ? (
-          <Link href={`/blog?page=${currentPage - 1}`}>
+          <Link href={`/${path}?page=${currentPage - 1}`}>
             <Image src={leftButton} alt="leftbutton" className="object-contain mx-auto" />
           </Link>
         ) : (
@@ -96,7 +93,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, leftBu
 
         {/* Next Button */}
         {currentPage < totalPages ? (
-          <Link href={`/blog?page=${currentPage + 1}`}>
+          <Link href={`/${path}?page=${currentPage + 1}`}>
             <Image src={rightButton} alt="rightbutton" className="object-contain mx-auto" />
           </Link>
         ) : (
