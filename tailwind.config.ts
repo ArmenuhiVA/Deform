@@ -24,15 +24,17 @@ module.exports = {
       customGray: "#9d9d9d",
       customGreen: "#03322F",
       customWhite: "#ffffff",
-      customGrayN300: "#C4C4C4",
       customBlack: "#000000",
-      customGrayN200: "#d9d9d9"
+      customGrayN200: "#d9d9d9",
+      customGrayN300: "#C4C4C4",
+      cunstomGrayN500: '#7b7b7b'
     },
     fontFamily: {
       overused: ["Overused Grotesk", "sans-serif"],
       mardoto: ["Mardoto", "serif"],
     },
     fontSize: {
+      "regular": ["16px", { lineHeight: "24px" }],
       "heading-1": ["48px", { lineHeight: "56px" }],
       "heading-2": ["40px", { lineHeight: "48px" }],
       "heading-3": ["20px", { lineHeight: "28px" }],
