@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 
-export default function About() {
+export default function Services() {
 
     const [isFirstOpen, setIsFirstOpen] = useState(false);
     const [isSecondOpen, setIsSecondOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function About() {
             <div className="lg:w-[1240px] lg:mx-auto  mx-6 ">
                 <div >
                     <h1 className="lg:w-[750px] lg:text-heading-1 text-heading-1-mobile font-bold lg:pt-[75px] lg:pb-[60px]  py-[24px]">
-                        For us, design isn't just a job - it's a calling to make a difference in people's lives.
+                        For us, design isn&apos;t just a job - it&apos;s a calling to make a difference in people&apos;s lives.
                     </h1>
                 </div>
             </div>
@@ -309,8 +309,7 @@ export default function About() {
                                     Concept Development
                                 </h2>
                                 <p className="lg:text-paragraph-m text-paragraph-m-mobile pt-[14px]">
-                                    This stage involves exploring the client's ideas, inspirations, and aspirations for the space.
-                                    Creative brainstorming and visualization techniques are used to develop a cohesive design concept that captures the client's vision and objectives.
+                                    This stage involves exploring the client&apos;s ideas, inspirations, and aspirations for the space. Creative brainstorming and visualization techniques are used to develop a cohesive design concept that captures the client&apos;s vision and objectives.
                                 </p>
                             </div>
                         )}

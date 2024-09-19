@@ -1,19 +1,12 @@
+"use client";
 
-"use client"; 
-
-
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import deformLogo from "../public/deform_logo.svg";
 import { motion } from "framer-motion";
-import React, { createContext, useContext } from 'react';
-
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "About", href: "/about", current: false },
@@ -24,26 +17,35 @@ const navigation = [
   { name: "Contact", href: "/contact", current: false },
 ];
 
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Navbar = () => {
+  const pathname = usePathname(); 
+
+ 
+  const isActive = (path: string): boolean => pathname === path;
+
   return (
-    <Disclosure as="nav" className="sticky top-0 z-50 bg-white-800 ">
-      <div className=" lg:px-[100px] ">
-        <div className="relative flex  items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] md:mx-auto px-6 lg:px-0">
+    <Disclosure as="nav" className="sticky top-0 z-50 bg-customWhite">
+      <div className="lg:px-[100px]">
+        <div className="relative flex items-center justify-between mt-[30px] border-b border-[#0000004D] h-16 max-w-[1240px] md:mx-auto px-6 lg:px-0">
+          {/* Logo */}
           <Link href="/">
             <Image src={deformLogo} alt="Logo" />
           </Link>
-          <div className="absolute hidden md:flex inset-y-0 right-0 items-center sm:static sm:inset-auto sm:pr-0 ">
+
+          {/* Desktop navigation */}
+          <div className="absolute hidden md:flex inset-y-0 right-0 items-center sm:static sm:inset-auto sm:pr-0">
             <div className="flex space-x-[40px] w-full">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  aria-current={item.current ? "page" : undefined}
-                  className="px-[10px] py-[18px] paragraph-s"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`px-[10px] py-[18px] text-paragraph-s ${isActive(item.href) ? 'text-customWhite border-b border-customBlack' : 'text-black'}`}
                 >
                   {item.name}
                 </Link>
@@ -51,10 +53,9 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Mobile menu button */}
           <div className="absolute inset-y-0 right-0 flex items-center md:hidden px-6">
-            {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white ">
-              <span className="absolute -inset-0.5" />
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white">
               <Bars3Icon
                 aria-hidden="true"
                 className="block h-6 w-6 group-data-[open]:hidden"
@@ -68,10 +69,11 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile menu */}
       <DisclosurePanel className="md:hidden overflow-hidden transform origin-top">
         <motion.div
-          initial={{ height: 0, opacity: 0 }} 
-          animate={{ height: "auto", opacity: 1 }} 
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 1.5 }}
           className="space-y-1 px-2 pb-3 pt-2"
         >
@@ -80,17 +82,15 @@ const Navbar = () => {
               key={item.name}
               as="a"
               href={item.href}
-              aria-current={item.current ? "page" : undefined}
+              aria-current={isActive(item.href) ? "page" : undefined}
               className={classNames(
-                item.current
+                isActive(item.href)
                   ? "bg-gray-900 text-white"
                   : "text-gray-300 hover:bg-gray-700 hover:text-white",
                 "block rounded-md px-6 py-2 text-base font-medium"
               )}
             >
-             
-                {item.name}
-             
+              {item.name}
             </DisclosureButton>
           ))}
         </motion.div>

@@ -27,7 +27,8 @@ module.exports = {
       customBlack: "#000000",
       customGrayN200: "#d9d9d9",
       customGrayN300: "#C4C4C4",
-      cunstomGrayN500: '#7b7b7b'
+      cunstomGrayN500: '#7b7b7b',
+      customInherit: 'inherit',
     },
     fontFamily: {
       overused: ["Overused Grotesk", "sans-serif"],
