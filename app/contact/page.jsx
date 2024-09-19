@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+
 import arrowright from "@/public/Arrow Right.svg";
 
 

@@ -1,12 +1,14 @@
 'use client'
 
 import Layout from "@/components/Layout";
+
 import stairs from '@/public/stairs.jpg'
 import frame99 from "@/public/Frame99.jpg"
 import frame100 from "@/public/Frame100.jpg"
 import arrowdown from '@/public/ArrowDown.svg'
 import plus from '@/public/Plus.svg'
 import vector from '@/public/Vector233.svg'
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -28,10 +30,6 @@ export default function Services() {
     const toggleForthSection = () => setIsForthOpen((prev) => !prev);
     const toggleSFifthSection = () => setIsFifthOpen((prev) => !prev);
     const toggleSixthSection = () => setIsSixthOpen((prev) => !prev);
-
-
-
-
 
 
     return (
@@ -930,12 +928,7 @@ export default function Services() {
                         )}
 
 
-
-
                     </div>
-
-
-
 
                 </div>
             </div>

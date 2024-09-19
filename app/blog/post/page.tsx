@@ -1,13 +1,15 @@
 import Layout from "@/components/Layout";
-import homeforblog from '@/public/homeforblog.jpg'
-import design from '@/public/Frame 59.png'
 import Image from "next/image";
+import Link from "next/link";
+
 import facebook from '@/public/facebook.svg'
 import twitter from '@/public/twitter.svg'
-import Link from "next/link";
+
 import blogpost from '@/public/blogpost.jpg'
 import project2 from '@/public/Project2.jpg'
 import project3 from '@/public/Project3.jpg'
+import homeforblog from '@/public/homeforblog.jpg'
+import design from '@/public/Frame 59.png'
 
 
 export default function BlogPost() {

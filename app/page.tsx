@@ -1,14 +1,13 @@
-import homeimg from "../public/homeimg.png";
 import Link from "next/link";
 import Image from "next/image";
-import arrowright from "../public/Arrow Right.svg";
 
 import kitchenimg from "../public/kitchen.png";
+import homeimg from "../public/homeimg.png";
 import stairsimg from '@/public/Imagestairs.jpg'
 import project1 from '@/public/Project1.jpg'
 import project2 from '@/public/Project2.jpg'
 import project3 from '@/public/Project3.jpg'
-
+import arrowright from "../public/Arrow Right.svg";
 
 import Layout from "@/components/Layout";
 

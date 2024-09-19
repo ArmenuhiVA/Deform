@@ -98,7 +98,7 @@ export default function ProjectsName() {
                 </div>
 
 
-                {/* Second Section With Image */}
+                {/* Third Section With Image */}
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-3 items-start">
                     {/* Left Title Column */}
                     <div className="col-span-1 ">
