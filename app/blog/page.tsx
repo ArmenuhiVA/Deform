@@ -1,32 +1,30 @@
 'use client'
 
-import homeimg from "../public/homeimg.png";
 import Link from "next/link";
 import Image from "next/image";
+import React from 'react';
+import { useSearchParams } from "next/navigation";
+
 import blogpost from '@/public/blogpost.jpg'
 import project2 from '@/public/Project2.jpg'
 import project3 from '@/public/Project3.jpg'
 import leftbutton from '@/public/leftButton.svg'
 import rightbutton from '@/public/rightButton.svg'
-import React from 'react';
+
 import Layout from "@/components/Layout";
-import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination";
 
-const TOTAL_PAGES = 10;
 
 export default function Blog() {
 
     const searchParams = useSearchParams();
     const currentPage = searchParams ? Number(searchParams.get('page')) : 1;
-    const TOTAL_PAGES = 10; // Replace this with your dynamic total page count
+    const TOTAL_PAGES = 10;
 
-   
+
     return (
         <Layout>
-
             {/* Title Section */}
-
             <div className="lg:w-[1240px] lg:mx-auto  mx-6 ">
                 <div >
                     <h1 className="lg:w-[500px] lg:text-heading-1 text-heading-1-mobile font-bold lg:pb-[60px] lg:pt-[75px] py-[24px]">
@@ -98,8 +96,6 @@ export default function Blog() {
                         <p className="text-paragraph-s-mobile">Apr 4, 2024</p>
                     </div>
 
-
-
                     <div className="flex flex-col">
                         <Link href="/blog/post">
                             <Image src={project2} alt="Urban design trends" className="object-contain" />
@@ -138,16 +134,15 @@ export default function Blog() {
                         <p className="text-subheading-2-mobile mt-4 font-bold">Urban design trends</p>
                         <p className="text-paragraph-s-mobile ">Apr 4, 2024</p>
                     </div>
-
                 </div>
 
                 <div>
-                    {/* Other blog page content */}
                     <Pagination
                         currentPage={currentPage}
                         totalPages={TOTAL_PAGES}
                         leftButton={leftbutton}
                         rightButton={rightbutton}
+                        path="blog"
                     />
                 </div>
             </div>
