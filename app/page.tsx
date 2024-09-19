@@ -46,7 +46,6 @@ export default function Home() {
               <Link href="/about">
 
                 <Image
-
                   src={arrowright}
                   alt="arrowright"
                   className="object-contain "
@@ -100,7 +99,7 @@ export default function Home() {
             <h2 className="text-heading-2-mobile lg:text-heading-2 font-bold"> Services </h2>
             <div className="border-b border-customGray lg:mt-[48px] mt-[24px]  lg:pb-[18px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Design Concept Consultation</p>
-              <Link href="/about">
+              <Link href="/services">
                 <Image
                   src={arrowright}
                   alt="Arrow"
@@ -110,7 +109,7 @@ export default function Home() {
             </div>
             <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px]  flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Interior Design</p>
-              <Link href="/about">
+              <Link href="/services">
                 <Image
                   src={arrowright}
                   alt="Arrow"
@@ -120,7 +119,7 @@ export default function Home() {
             </div>
             <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px]  mt-[16px] pb-[16px] flex items-center justify-between text-customGray hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Interior Decoration</p>
-              <Link href="/about">
+              <Link href="/services">
                 <Image
                   src={arrowright}
                   alt="Arrow"
@@ -130,7 +129,7 @@ export default function Home() {
             </div>
             <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Author Support</p>
-              <Link href="/about">
+              <Link href="/services">
                 <Image
                   src={arrowright}
                   alt="Arrow"
@@ -140,7 +139,7 @@ export default function Home() {
             </div>
             <div className="border-b border-customGray lg:mt-[18px] lg:pb-[18px] mt-[16px] pb-[16px] flex items-center justify-between text-customGray  hover:text-customBlack hover:cursor-pointer">
               <p className="text-paragraph-m ">Supply Management</p>
-              <Link href="/about">
+              <Link href="/services">
                 <Image
                   src={arrowright}
                   alt="Arrow"
@@ -149,7 +148,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="lg:w-[151px] lg:h-[42px] border-b border-black lg:mt-[66px] hidden lg:flex items-center justify-end">
-              <Link href="/about">
+              <Link href="/services">
                 <Image
                   src={arrowright}
                   alt="Arrow"

@@ -1,3 +1,5 @@
+"use client"
+
 import Layout from "@/components/Layout";
 import homeimg from '@/public/titleImage.png'
 import ceoimg from '@/public/AnushImage.jpg'

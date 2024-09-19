@@ -1,5 +1,6 @@
 import Image from "next/image";
 import group from '../public/Group.png'
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -9,21 +10,21 @@ export default function Footer() {
                     <div className="lg:w-[435px] grid grid-cols-1 sm:grid-cols-2 gap-[24px] lg:mr-[114px] lg:gap-[40px]">
                         {/* First Div with Links */}
                         <div className="lg:w-full">
-                            <ol className="list-decimal pl-5 space-y-2  text-customWhite">
+                            <ol start={1} className="list-decimal pl-5 space-y-2 text-customWhite">
                                 <li>
-                                    <a href="/site" className="block lg:text-paragraph-s text-paragraph-s-mobile text-customWhite mb-[8px] lg:mb-[10px]"> Site</a>
-                                    <a href="/about" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">About</a>
-                                    <a href="/projects" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Projects</a>
-                                    <a href="/services" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Services</a>
-                                    <a href="/awards" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Awards</a>
-                                    <a href="/contact" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300">Contact us</a>
+                                    <p className="block lg:text-paragraph-s text-paragraph-s-mobile text-customWhite mb-[8px] lg:mb-[10px]">Site</p>
+                                    <Link href="/about" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">About</Link>
+                                    <Link href="/projects" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Projects</Link>
+                                    <Link href="/services" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Services</Link>
+                                    <Link href="/awards" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Awards</Link>
+                                    <Link href="/contact" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300">Contact us</Link>
                                 </li>
                             </ol>
                         </div>
 
                         {/* Second Div with Social Media Links */}
                         <div className="lg:w-full">
-                            <ol className="list-decimal pl-5 space-y-2 text-customWhite">
+                            <ol start={2} className="list-decimal pl-5 space-y-2 text-customWhite">
                                 <li>
                                     <p className="lg:text-paragraph-s text-paragraph-s-mobile text-customWhite lg:mb-[10px] mb-[8px]">Social</p>
                                     <a href="https://linkedin.com" className="block lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px] lg:mb-[10px]">Linkedin</a>
@@ -34,10 +35,9 @@ export default function Footer() {
                             </ol>
                         </div>
 
-
                         {/* Third Div */}
                         <div className="lg:w-full">
-                            <ol className="list-decimal pl-5 space-y-2 text-customWhite">
+                            <ol start={3} className="list-decimal pl-5 space-y-2 text-customWhite">
                                 <li>
                                     <p className="lg:text-paragraph-s text-paragraph-s-mobile text-customWhite mb-[8px]">Contact</p>
                                     <p className="lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300 mb-[8px]">Info@deformbuild.com</p>
@@ -48,14 +48,14 @@ export default function Footer() {
 
                         {/* Fourth Div */}
                         <div className="lg:w-full">
-                            <ol className="list-decimal pl-5 space-y-2 text-customWhite">
+                            <ol start={4} className="list-decimal pl-5 space-y-2 text-customWhite">
                                 <li>
                                     <p className="lg:text-paragraph-s text-paragraph-s-mobile text-customWhite mb-[8px]">Career</p>
                                     <p className="lg:text-paragraph-xs text-paragraph-xs-mobile text-customGrayN300">Info@deformbuild.com</p>
                                 </li>
                             </ol>
                         </div>
-                    </div>
+                    </div> 
                     <div className="lg:w-[691px] mt-[34px] lg:mt-0 ">
                         <Image src={group} alt="Group" className="object-cover" />
                     </div>
@@ -64,7 +64,6 @@ export default function Footer() {
             <div className="lg:mx-auto lg:w-[1240px] mx-6 mt-[32px] lg:mb-[40px] mb-[24px] text-customWhite lg:text-paragraph-xs text-paragraph-xs-mobile">
                 <div className="text-lg lg:text-xl leading-relaxed flex flex-col lg:flex-row lg:space-x-12">
                     <div className="lg:w-1/2">
-
                         <p>Ⓒ Copyright 2024 Deform architecture</p>
                     </div>
                     <div className="lg:w-1/2 flex lg:justify-end ">
@@ -73,6 +72,5 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-
     )
 }
