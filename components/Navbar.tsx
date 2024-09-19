@@ -1,12 +1,15 @@
 "use client";
 
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { motion } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
 import Link from "next/link";
 import Image from "next/image";
-import deformLogo from "../public/deform_logo.svg";
-import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+
+import deformLogo from "../public/deform_logo.svg";
+
 
 const navigation = [
   { name: "About", href: "/about", current: false },
